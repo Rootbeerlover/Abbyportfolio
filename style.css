@@ -1,0 +1,305 @@
+/* Scroll container */
+
+div.scroll-container {
+  padding: 10px;
+  overflow: auto;
+  white-space: nowrap;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%; 
+}
+
+div.scroll-container img {
+  padding: 10px;
+}
+
+/* navigation side bar */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  font-size: 1.5em;
+  font-family: "Dokdo", system-ui;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.sidebar a:hover {
+  color: rebeccapurple;
+  cursor: pointer;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+/* Fonts */
+
+.playfair-display {
+  font-family: "Playfair Display", serif; 
+}
+
+.dokdo-regular {
+  font-family: "Dokdo", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* General */
+
+header {
+    font-family: "Dokdo", system-ui;
+    font-size: 5em;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+h1 {
+  font-family: "Dokdo", system-ui;
+    font-size: 2.2em;
+    display: flex;
+    justify-content: center ;
+    color: rgb(15, 26, 66); 
+     
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+}
+
+h3 { 
+font-family: "Playfair Display", serif;
+}
+
+p {
+  font-family: "Playfair Display", serif;
+}
+
+figcaption {
+  font-size: 1.3em;
+}
+
+footer {
+      font-family: "Dokdo", system-ui;
+      justify-content: right;  
+      display: flex;
+      font-size: 1.2em; 
+      padding-right: 60px;
+      padding-bottom: 30px;
+      padding-top: 30px; 
+}
+
+/* about page */
+
+.contact {
+  font-family: "Dokdo", system-ui;
+  display: flex;
+  font-size: 2em;
+  margin: auto;
+  width: 50%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+
+.contact a {
+    color: rgb(27, 22, 120);
+}
+
+.contact a:link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contact a:hover{
+  color: rgb(255, 200, 47);
+}
+
+.about{
+  margin: auto;
+  width: 50%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.about a:link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.about a {
+  color: darkblue;
+}
+
+.about a:hover {
+  cursor: pointer;
+  color: darkcyan;
+}
+
+.email{
+  margin: auto;
+  width: 50%;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  font-family: "Dokdo", system-ui;
+  font-size: 1.4em;
+}
+
+.bottom {
+  padding-right: 60px;
+  padding-top: 40px;
+}
+
+/* Textile Page */
+
+.textile-caption {
+  font-family: "Playfair Display", serif;
+  font-size: 1.17em;
+  padding: 30px;
+}
+
+.textile {
+  margin: auto;
+  align-self: auto;
+  padding: 3px;
+}
+
+/* Photography Page */
+.photo {
+  margin: auto;
+  align-self: auto;
+}
+
+.photo-caption {
+  font-family: "Playfair Display", serif;
+  font-size: 1.17em;
+  padding: 20px;
+}
+
+/* Digital arts & Mixed Media Page */
+
+.digital-caption{
+  font-family: "Playfair Display", serif;
+  padding: 20px;
+  font-size: 1.15em;
+}
+
+.digital {
+  margin: auto;
+  align-self: auto;
+  padding: 3px;
+}
+
+.arts {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* fade on image - homepage */
+
+.container {
+  position: relative;
+  width: 90%;
+}
+
+.image {
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  font-family: "Dokdo", system-ui;
+  color: rgb(15, 26, 66);
+  font-size: 3.5em;
+  padding: 16px 32px;
+  cursor: pointer;
+}
+
+/* Go back to top button  */
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  z-index: 99;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: rgb(15, 26, 66);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  font-family: "Dokdo", system-ui;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
